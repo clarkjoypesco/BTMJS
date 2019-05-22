@@ -1,90 +1,43 @@
-// alert("Hello World");
+//PRIMITIVE
 
-// Log To Console
-// console.log("Hello World");
-// console.log(123);
-// console.log(true);
+//String
+const name = "John Doe";
+console.log(typeof name);
 
-// var greeting = "Hello";
-// console.log(greeting);
+//Number
+const age = 45;
+console.log(typeof age);
 
-// console.log([1, 2, 3, 4, 5]);
-// console.log({ a: 1, b: 2 });
-// console.table({ a: 1, b: 2 });
+//Boolean
+const hasKids = false;
+console.log(typeof hasKids);
 
-// console.error("This is some error");
+//Null
+//Null is a bug return object
+const car = null;
+console.log(typeof car);
 
-// console.clear();
+//undefined
+let test;
+console.log(typeof test);
 
-// console.warn("This is a warning!");
-// console.time("Hello");
-// console.log("Hello World");
-// console.log("Hello World");
-// console.log("Hello World");
-// console.log("Hello World");
-// console.log("Hello World");
-// console.log("Hello World");
-// console.log("Hello World");
-// console.log("Hello World");
-// console.timeEnd("Hello");
-/*
-multi 
-line c
-comments
-*/
+//Symbol
+const sym = Symbol();
+console.log(typeof sym);
 
-//var, let, const
+//REFERENCE Types - All comeback as Objects
 
-// var name = "John Doe";
-// console.log(name);
+//Array
+const hobbies = ["movies", "music"];
+console.log(typeof hobbies);
 
-// name = "Steve Smith";
-// console.log(name);
-
-// //init var
-// var greeting;
-
-// console.log(greeting);
-// greeting = "Hello";
-// console.log(greeting);
-
-// //letters, numbers,_, $
-// //Can not start with number
-// // var name = 'John';
-
-// var firstName = 'John';//Camel Case
-// var first_name ='Sara';//underscore convention
-// var FirstName = 'Tom'; //Pascal Case
-// var firstname;
-
-//LET
-// let name;
-// let name = "John Doe";
-// console.log(name);
-
-// name = "Steve Smith";
-// console.log(name);
-
-//CONST
-const name = "John";
-console.log(name);
-
-//cannot reassign
-// name = "Sarah";
-
-// const greeting;
-
-const person = {
-  name: "John",
-  age: 30
+//Object literal
+const address = {
+  city: "Maasin",
+  state: "SL"
 };
+console.log(typeof address);
 
-person.name = "Sara";
-person.age = 32;
-
-// console.log(person);
-
-const numbers = [1, 2, 3, 4, 5];
-numbers.push(6);
-
-console.log(numbers);
+const today = new Date();
+console.log(today);
+console.log(typeof today);
