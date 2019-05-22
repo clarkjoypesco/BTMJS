@@ -1,43 +1,29 @@
+const num1 = 100;
+const num2 = 50;
+
 let val;
 
-//Number to String
-val = String(555);
-val = String(4 + 4);
+//Simple math with numbers
+val = num1 + num2;
+val = num1 - num2;
+val = num1 * num2;
+val = num1 / num2;
+val = num1 % num2;
 
-//Boolean to String
-val = String(true);
+//Math Object
+val = Math.PI;
+val = Math.E;
+val = Math.round(2.4);
+val = Math.ceil(2.4);
+val = Math.floor(2.8);
+val = Math.sqrt(64);
+val = Math.abs(-3);
+val = Math.pow(8, 2);
+val = Math.min(2, 3, 4, 5, 62, 31, -2);
+val = Math.max(3, 2, 54, 235, 2, 5, 232, 115);
+val = Math.random();
 
-//Date to String
-val = String(new Date());
+val = Math.floor(Math.random() * 20 + 1);
 
-//Array to String
-val = String([1, 2, 3, 4, 5]);
-
-//toString()
-val = (5).toString();
-val = true.toString();
-
-//String to number
-val = Number("5");
-val = Number(true);
-val = Number(false);
-val = Number(null);
-val = Number("hello");
-val = Number([1, 2, 3]);
-
-//parseInt
-val = parseInt("100.30");
-val = parseFloat("100.31");
-
-//Output
-// console.log(val);
-// console.log(typeof val);
-// // console.log(val.length);
-// console.log(val.toFixed(2));
-
-const val1 = String(5);
-const val2 = 6;
-const sum = Number(val1 + val2);
-
-console.log(sum);
-console.log(typeof sum);
+//output
+console.log(val);
