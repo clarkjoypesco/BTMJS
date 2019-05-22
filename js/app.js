@@ -1,43 +1,43 @@
-//PRIMITIVE
+let val;
 
-//String
-const name = "John Doe";
-console.log(typeof name);
+//Number to String
+val = String(555);
+val = String(4 + 4);
 
-//Number
-const age = 45;
-console.log(typeof age);
+//Boolean to String
+val = String(true);
 
-//Boolean
-const hasKids = false;
-console.log(typeof hasKids);
+//Date to String
+val = String(new Date());
 
-//Null
-//Null is a bug return object
-const car = null;
-console.log(typeof car);
+//Array to String
+val = String([1, 2, 3, 4, 5]);
 
-//undefined
-let test;
-console.log(typeof test);
+//toString()
+val = (5).toString();
+val = true.toString();
 
-//Symbol
-const sym = Symbol();
-console.log(typeof sym);
+//String to number
+val = Number("5");
+val = Number(true);
+val = Number(false);
+val = Number(null);
+val = Number("hello");
+val = Number([1, 2, 3]);
 
-//REFERENCE Types - All comeback as Objects
+//parseInt
+val = parseInt("100.30");
+val = parseFloat("100.31");
 
-//Array
-const hobbies = ["movies", "music"];
-console.log(typeof hobbies);
+//Output
+// console.log(val);
+// console.log(typeof val);
+// // console.log(val.length);
+// console.log(val.toFixed(2));
 
-//Object literal
-const address = {
-  city: "Maasin",
-  state: "SL"
-};
-console.log(typeof address);
+const val1 = String(5);
+const val2 = 6;
+const sum = Number(val1 + val2);
 
-const today = new Date();
-console.log(today);
-console.log(typeof today);
+console.log(sum);
+console.log(typeof sum);
