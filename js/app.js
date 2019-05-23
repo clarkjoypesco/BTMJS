@@ -1,46 +1,52 @@
-const color = "yellow";
+//FUNCTION DECLARATION
+function greet(firstName = "John", lastName = "Doe") {
+  // console.log("Hello");
 
-switch (color) {
-  case "red":
-    console.log("Color is red");
-    break;
-  case "blue":
-    console.log("Color is blue");
-    break;
-  default:
-    console.log("Color is not red or blue");
-    break;
+  //es5
+  // if (typeof firstName === "undefined") {
+  //   firstName = "John";
+  // }
+  // if (typeof lastName === "undefined") {
+  //   lastName = "Doe";
+  // }
+
+  return "Hello " + firstName + " " + lastName;
 }
 
-let day;
+// console.log(greet("John", "Doe"));
 
-switch (new Date().getDay()) {
-  case 0:
-    day = "Sunday";
-    break;
+//FUNCTION EXPRESSIONS
+const square = function(x = 3) {
+  return x * x;
+};
 
-  case 1:
-    day = "Monday";
-    break;
+// console.log(square());
 
-  case 2:
-    day = "Tuesday";
-    break;
+//immediately invokeable function expression - IIFES
 
-  case 3:
-    day = "Wednesday";
-    break;
+// (function() {
+//   console.log("IIFE Ran..");
+// })();
 
-  case 4:
-    day = "Thursday";
-    break;
+// (function(name) {
+//   console.log("Hello" + name);
+// })("Brad");
 
-  case 5:
-    day = "Friay";
-    break;
-  case 6:
-    day = "Saturday";
-    break;
-}
+//PROPERTY METHODS
 
-console.log(`Today is ${day}`);
+const todo = {
+  add: function() {
+    console.log("Add todo...");
+  },
+  edit: function(id) {
+    console.log(`Edit todo ${id}`);
+  }
+};
+
+todo.delete = function() {
+  console.log("Delete todo...");
+};
+
+todo.add();
+todo.edit(22);
+todo.delete();
