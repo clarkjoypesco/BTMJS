@@ -68,10 +68,13 @@ function under50(num) {
 function over50(num) {
   return num > 50;
 }
+function over30(num) {
+  return num > 30;
+}
 
 val = numbers.find(under50);
 val = numbers.find(over50);
-
+val = numbers.find(over30);
 //output
 console.log(numbers);
 console.log(val);
