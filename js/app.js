@@ -1,52 +1,71 @@
-//FUNCTION DECLARATION
-function greet(firstName = "John", lastName = "Doe") {
-  // console.log("Hello");
+// //FOR LOOP
 
-  //es5
-  // if (typeof firstName === "undefined") {
-  //   firstName = "John";
-  // }
-  // if (typeof lastName === "undefined") {
-  //   lastName = "Doe";
-  // }
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+//   if (i === 2) {
+//     console.log("2 is my favorite number");
+//     continue;
+//   }
 
-  return "Hello " + firstName + " " + lastName;
+//   if(i === 5){
+//     break;
+
+//   }
+//   console.log("Number " + i);
+// }
+
+//WHILE LOOP
+
+// let i = 0;
+
+// while (i < 10) {
+//   console.log("Number " + i);
+//   i++;
+// }
+
+//DO WHILE
+
+// let i = 100;
+
+// do {
+//   console.log("Number " + i);
+//   i++;
+// } while (i < 10);
+
+//LOOP THROUGH ARRAY
+const cars = ["ford", "chevy", "honda", "toyota"];
+// cars[1];
+
+// for (let i = 0; i < cars.length; i++) {
+//   console.log(cars[i]);
+// }
+
+//FOREACH
+// cars.forEach(function(car, index, array) {
+//   console.log(`${index} : ${car}`);
+//   console.log(array);
+// });
+
+//MAP
+// const users = [
+//   { id: 1, name: "John" },
+//   { id: 2, name: "Sara" },
+//   { id: 3, name: "Karen" },
+//   { id: 4, name: "Nats" }
+// ];
+
+// const ids = users.map(function(user) {
+//   return user.id;
+// });
+
+// console.log(ids);
+
+const user = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 40
+};
+
+for (let x in user) {
+  console.log(`${x} : ${user[x]}`);
 }
-
-// console.log(greet("John", "Doe"));
-
-//FUNCTION EXPRESSIONS
-const square = function(x = 3) {
-  return x * x;
-};
-
-// console.log(square());
-
-//immediately invokeable function expression - IIFES
-
-// (function() {
-//   console.log("IIFE Ran..");
-// })();
-
-// (function(name) {
-//   console.log("Hello" + name);
-// })("Brad");
-
-//PROPERTY METHODS
-
-const todo = {
-  add: function() {
-    console.log("Add todo...");
-  },
-  edit: function(id) {
-    console.log(`Edit todo ${id}`);
-  }
-};
-
-todo.delete = function() {
-  console.log("Delete todo...");
-};
-
-todo.add();
-todo.edit(22);
-todo.delete();
