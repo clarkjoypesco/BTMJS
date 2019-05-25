@@ -25,11 +25,27 @@ const posts = [
 
 getPosts();
 
-function createPost(post, callback) {
-  setTimeout(function() {
-    posts.push(post);
-    callback();
-  }, 2000);
+// function createPost(post, callback) {
+//   setTimeout(function() {
+//     posts.push(post);
+//     callback();
+//   }, 2000);
+// }
+
+function createPost(post) {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      posts.push(post);
+
+      const error = false;
+
+      if (!error) {
+        resolve();
+      } else {
+        reject("Error: Something went wrong");
+      }
+    }, 2000);
+  });
 }
 
 function getPosts() {
@@ -42,4 +58,10 @@ function getPosts() {
   }, 1000);
 }
 
-createPost({ title: "Post Five", body: "This is post five" }, getPosts);
+// createPost({ title: "Post Five", body: "This is post five" }, getPosts);
+
+createPost({ title: "Post Five", body: "This is post five" })
+  .then(getPosts)
+  .catch(function(err) {
+    console.log(err);
+  });
