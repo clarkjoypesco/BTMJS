@@ -28,9 +28,25 @@ re = /Hel{2,}o/i; // Must occur at least {m} times
 
 // Parentheses () - Grouping
 re = /^([0-9]x){3}$/;
+// const str = "3x3x3x";
+
+// Shorthand Character Classes
+re = /\w/; //Word Character - alphanumeric or _
+re = /\w+/; //+ = one or more
+re = /\W/; // Non-Word character
+re = /\d/; // Match any digit
+re = /\d+/; // Match any digit 0 or more times
+re = /\D/; // Match any Non-digit
+re = /\s/; // Match whitespace char
+re = /\S/; // Match non-whitespace char
+re = /Hill\b/i; //Word boundary
+
+// Assertions
+re = /x(?=y)/; // Match x only if followed by y
+re = /x(?!y)/; // Match x only if NOT followed by y
 
 //String to match
-const str = "3x3x3x";
+const str = "dasdasxYdasdasd";
 
 //Log Results
 const result = re.exec(str);
